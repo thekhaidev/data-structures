@@ -17,3 +17,6 @@ var Queue = function() {
 
   return someInstance;
 };
+
+
+//fifo method
