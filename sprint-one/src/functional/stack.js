@@ -10,11 +10,6 @@ var Stack = function() {
   //define what push and pop
   var push, pop;
 
-
-
-
-
-
   // Implement the methods below
 
   //made a numerical key value
@@ -47,3 +42,11 @@ var Stack = function() {
   return someInstance;
 };
 
+
+//FAILING TEST
+// it('allows sequentially additing and removing items', function() {
+//   stack.push('a');
+//   expect(stack.pop()).to.equal('a');
+//   stack.push('b');
+//   expect(stack.pop()).to.equal('b');
+// });
