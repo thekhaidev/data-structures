@@ -7,6 +7,11 @@ var Stack = function() {
 
   //initialize size to start at zero
   var size = 0;
+  //define what push and pop
+  var push, pop;
+
+
+
 
 
 
@@ -20,20 +25,25 @@ var Stack = function() {
     //set a numerical value for the key that will be increased by one as each value is added to the stack
     storage[key] = value;
     key++;
+    return storage;
   };
 
   //Remove and return the string on the top of the stack
   someInstance.pop = function() {
     //using object.keys, remove the string at the key that is at the end of the generated list
-    var keys = someInstance.keys;
+    size = Object.keys(storage).length;
+    var last = storage[size];
+    //delete the key
+    delete storage[size];
+    return last;
   };
 
   //Return the number of items on the stack
   someInstance.size = function() {
+    size = Object.keys(storage).length;
     return size;
   };
 
   return someInstance;
 };
-
 
