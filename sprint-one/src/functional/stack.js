@@ -1,4 +1,5 @@
 //lifo method
+
 var Stack = function() {
   var someInstance = {};
 
@@ -20,7 +21,6 @@ var Stack = function() {
     //set a numerical value for the key that will be increased by one as each value is added to the stack
     storage[key] = value;
     key++;
-    // console.log('key: ', key);
     return storage;
   };
 
@@ -28,9 +28,6 @@ var Stack = function() {
   someInstance.pop = function() {
     //using object.keys, remove the string at the key that is at the end of the generated list
     var last = storage[key - 1];
-    // console.log('last: ', last);
-    // console.log('size: ', size);
-    // console.log('storage: ', storage);
     //delete the key
     delete storage[key - 1];
     key--;
@@ -45,11 +42,3 @@ var Stack = function() {
   return someInstance;
 };
 
-
-//FAILING TEST
-// it('allows sequentially additing and removing items', function() {
-//   stack.push('a');
-//   expect(stack.pop()).to.equal('a');
-//   stack.push('b');
-//   expect(stack.pop()).to.equal('b');
-// });
