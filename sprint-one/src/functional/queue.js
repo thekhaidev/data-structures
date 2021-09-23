@@ -8,6 +8,8 @@ var Queue = function() {
 
   //create numerical keys
   var key = 1;
+  //create var to track current location for dequeue
+  var num = 1;
 
   // Implement the methods below
 
@@ -20,22 +22,21 @@ var Queue = function() {
 
   //Remove and return the string at the front of the queue
   someInstance.dequeue = function() {
-    if (size > 0) {
-      console.log(storage);
-      //set a variable equal to the first value in storage
-      var first = storage['1'];
-      //delete the first variable from storage
-      Delete(storage['1']);
-      //return the deleted variable
-      return first;
-    }
+    //could set the location for storage to equal an increasing variable value with a toString
+    var index = num.toString();
+    //set a variable equal to the first value in storage
+    var first = storage[index];
+    //delete the first variable from storage
+    delete storage[index];
+    //return the deleted variable
+    num++;
+    return first;
   };
 
   someInstance.size = function() {
     size = Object.keys(storage).length;
     return size;
   };
-
   return someInstance;
 };
 

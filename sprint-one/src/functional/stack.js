@@ -20,7 +20,7 @@ var Stack = function() {
     //set a numerical value for the key that will be increased by one as each value is added to the stack
     storage[key] = value;
     key++;
-    console.log('key: ', key);
+    // console.log('key: ', key);
     return storage;
   };
 
@@ -28,9 +28,9 @@ var Stack = function() {
   someInstance.pop = function() {
     //using object.keys, remove the string at the key that is at the end of the generated list
     var last = storage[key - 1];
-    console.log('last: ', last);
-    console.log('size: ', size);
-    console.log('storage: ', storage);
+    // console.log('last: ', last);
+    // console.log('size: ', size);
+    // console.log('storage: ', storage);
     //delete the key
     delete storage[key - 1];
     key--;
