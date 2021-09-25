@@ -11,7 +11,7 @@ Queue.prototype.enqueue = function(value) {
     this.storage[this.counter] = value;
   } else {
     this.storage[this.counter] = value;
-    this.counter;
+    this.counter++;
   }
 };
 //dequeue
