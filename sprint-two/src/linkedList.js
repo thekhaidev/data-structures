@@ -22,14 +22,26 @@ var LinkedList = function() {
   };
 
   list.removeHead = function() {
-    // node.next --> head
-    // if this.head exists --> remove head
-
+    //set a variable that is equal to the head of the list
+    var removed = this.head.value;
+    //set this.head to equal the following node in the list
+    this.head = this.head.next;
+    return removed;
   };
 
   list.contains = function(target) {
     // iterate through linked list for target
     // return true/false
+    var current = this.head;
+
+    while ( current ) {
+      if (current.value === target) {
+        return true;
+      } else {
+        current = current.next;
+      }
+    }
+    return false;
   };
 
   return list;
@@ -47,3 +59,6 @@ var Node = function(value) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+
+
+
