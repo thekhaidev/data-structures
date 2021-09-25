@@ -3,7 +3,10 @@ var Tree = function(value) {
   newTree.value = value;
 
   // your code here
-  newTree.children = null;  // fix me
+  newTree.children = []; // Fixed
+
+  //extend
+  _.extend(newTree, treeMethods);
 
   return newTree;
 };
@@ -11,9 +14,23 @@ var Tree = function(value) {
 var treeMethods = {};
 
 treeMethods.addChild = function(value) {
+  var newTree = new Tree(value);
+  this.children.push(newTree);
 };
 
 treeMethods.contains = function(target) {
+  //Check if Dave has children named Rudolf
+  if (this.value === target) {
+    return true;
+  }
+
+  for (var i = 0; i < this.children.length; i++) {
+    var current = this.children[i];
+    if (current.contains(target)) {
+      return true;
+    }
+  }
+  return false;
 };
 
 
@@ -21,3 +38,5 @@ treeMethods.contains = function(target) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+
+
