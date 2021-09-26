@@ -1,3 +1,5 @@
+//lifo method
+
 var Stack = function() {
   var someInstance = {};
 
@@ -6,7 +8,17 @@ var Stack = function() {
   var currentSize = 0;
   someInstance.storage = storage;
 
+  //initialize size to start at zero
+  var size = 0;
+  //define what push and pop
+  var push, pop;
+
   // Implement the methods below
+
+  //made a numerical key value
+  var key = 1;
+
+  //Add a string to the top of the stack
   someInstance.push = function(value) {
     // Should do what native push method does
     // Takes value and adds to end of storage object
@@ -14,6 +26,7 @@ var Stack = function() {
     currentSize++;
   };
 
+  //Remove and return the string on the top of the stack
   someInstance.pop = function() {
     // Should do what native pop method does
     // Removes last value of storage object
@@ -27,7 +40,7 @@ var Stack = function() {
     return removed;
 
   };
-
+  //Return the number of items on the stack
   someInstance.size = function() {
     if (currentSize < 0) {
       return 0;
@@ -37,3 +50,4 @@ var Stack = function() {
 
   return someInstance;
 };
+

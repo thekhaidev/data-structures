@@ -30,5 +30,3 @@ var stackMethods = {
     return this.counter;
   }
 };
-
-

@@ -1,6 +1,4 @@
 class Queue {
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
   constructor() {
     this.storage = {};
     this.counter = 0;
@@ -29,3 +27,5 @@ class Queue {
     } return this.counter;
   }
 }
+
+var result = new Giraffe();
