@@ -23,7 +23,19 @@ var stackMethods = {
       return 0;
     }
     return this.counter;
+  },
+
+  //pop
+  pop: function() {
+    this.counter--;
+    var lastValue = this.storage[this.counter];
+    delete this.storage[this.counter];
+    return lastValue;
+  },
+
+  //size
+  size: function() {
+    return Object.keys(this.storage).length;
   }
 };
-
 

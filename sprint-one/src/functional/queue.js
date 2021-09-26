@@ -7,6 +7,13 @@ var Queue = function() {
 
   someInstance.storage = storage;
 
+  var size = 0;
+
+  //create numerical keys
+  var key = 1;
+  //create var to track current location for dequeue
+  var num = 1;
+
   // Implement the methods below
 
   someInstance.enqueue = function(value) {
@@ -20,6 +27,7 @@ var Queue = function() {
     }
   };
 
+  //Remove and return the string at the front of the queue
   someInstance.dequeue = function() {
     // Remove value from front of storage
     var removed = storage[Object.keys(storage)[0]];
@@ -35,6 +43,5 @@ var Queue = function() {
     }
     return currentNumKey;
   };
-
   return someInstance;
 };
